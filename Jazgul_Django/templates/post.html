@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>posts</title>
+</head>
+<body>
+{% for i in posts  %}
+<h1>{{i.title}}</h1>
+<br>
+<p>{{i.description}}</p>
+<img src="{{i.image.url}}" alt="" width="400" height="400">
+<br>
+<p>{{i.created_date}}</p>
+<br>
+
+{% endfor %}
+</body>
+</html>
