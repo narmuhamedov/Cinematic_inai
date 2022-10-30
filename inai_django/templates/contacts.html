@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Contacts</title>
+     <link rel="stylesheet" href="{% static 'css/style2.css' %}">
+</head>
+<body>
+<div class="container">
+  <div class="card">
+    <div class="front">
+      <div class="logo"><span></span></div>
+    </div>
+    <div class="back">
+      {%for i in concatct %}
+      <h1>{{i.name}}<span>{{i.work}}</span></h1>
+      <ul>
+        <li>{{i.phone_number}}</li>
+        <li>{{i.email}}</li>
+        <li>my-site.com</li>
+      {% endfor %}
+        </ul>
+    </div>
+    </div>
+  </div>
+
+</body>
+</html>

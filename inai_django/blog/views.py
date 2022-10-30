@@ -15,3 +15,8 @@ def posts(request):
 def about(request):
     about = models.About_us.objects.all()
     return render(request, 'about.html', {'about':about})
+
+#For contacts
+def contacs(request):
+    contact = models.Contacts.objects.all()
+    return render(request, 'contacts.html', {'concatct': contact})

@@ -13,3 +13,13 @@ class Poster(models.Model):
 class About_us(models.Model):
     image = models.ImageField(upload_to='')
     description = models.TextField()
+
+
+class Contacts(models.Model):
+    name = models.CharField(max_length=50, null=True)
+    work = models.CharField(max_length=40, null=True)
+    image = models.ImageField(upload_to='')
+    phone_number = models.CharField(max_length=15)
+    email = models.EmailField()
+
+
