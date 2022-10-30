@@ -8,3 +8,8 @@ class Poster(models.Model):
 
     def __str__(self):
         return self.title
+
+
+class About_us(models.Model):
+    image = models.ImageField(upload_to='')
+    description = models.TextField()

@@ -3,25 +3,25 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Post</title>
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <title>About US</title>
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
 <body>
 <center>
-    <a href="" class="gradient-button">Home</a>
+   <a href="/posts/" class="gradient-button">Home</a>
     <a href="/about_us/" class="gradient-button">About Us</a>
     <a href="" class="gradient-button">Contacts</a>
     <a href="" class="gradient-button">Comment</a>
 
-<h1>Наши посты</h1>
-{% for i in post_object %}
-<h1>{{i.title}}</h1>
-    <p>{{i.description}}</p>
-    <img src="{{i.image.url}}" alt="" width="200" height="200">
-   <p>{{i.created_date}}</p>
-    <hr>
-{%endfor%}
-</center>
+    {%for i in about%}
+    <div class="card">
+  <img src="{{i.image.url}}" alt="Avatar" style="width:50%">
+  <div class="container">
 
+    <p>{{i.description}}</p>
+  </div>
+</div>
+    {%endfor%}
+</center>
 </body>
 </html>
