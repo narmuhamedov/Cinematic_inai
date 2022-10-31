@@ -20,7 +20,7 @@ async def hello(message: types.Message):
 async def task_1(message: types.Message):
     markup = InlineKeyboardMarkup()
     button_call_1 = InlineKeyboardButton("Следующая задача",
-                                         callback_data='next_task')
+                                         callback_data='next_task1')
     markup.add(button_call_1)
     question1 = 'Вывод:'
     answers = ['0.0', '4', '3.3', 'error']
@@ -38,10 +38,10 @@ async def task_1(message: types.Message):
 
     )
 #2
-@dp.callback_query_handler(lambda func: func.data=='next_task')
+@dp.callback_query_handler(lambda func: func.data=='next_task1')
 async def games_1(call: types.CallbackQuery):
     markup = InlineKeyboardMarkup()
-    button_call_2 = InlineKeyboardButton('Следующая задача', callback_data='next_task3')
+    button_call_2 = InlineKeyboardButton('Следующая задача', callback_data='next_task2')
     markup.add(button_call_2)
     question = 'Вывод:'
     answers = ['1', '2', '3', 'error']
@@ -56,11 +56,10 @@ async def games_1(call: types.CallbackQuery):
         type='quiz',
         reply_markup=markup
 
-
     )
 
 #3
-@dp.callback_query_handler(lambda func: func.data=='next_task3')
+@dp.callback_query_handler(lambda func: func.data=='next_task2')
 async def games_1(call: types.CallbackQuery):
     question = 'Что за соц сеть:'
     answers = ['Google Meet', 'Zoom', 'Telegram', 'error']
