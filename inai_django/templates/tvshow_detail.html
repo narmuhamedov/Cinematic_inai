@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Films Detail</title>
+</head>
+<body>
+<center>
+  <h1><b>Название</b> - {{show.title}}</h1>
+  <p><b>Описание</b> - {{show.description}}</p>
+  <img src="{{show.image.url}}" alt="" width="200" height="200">
+  <p><b>Колличество серий</b> -{{show.quantity}}</p>
+  <iframe src="{{show.trailer}}" frameborder="0" width="640" height="420"></iframe>
+  <p><b>Жанр</b> - <i>{{show.genre}}</i></p>
+</center>
+</body>
+</html>
