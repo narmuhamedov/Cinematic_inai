@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'blog',
+    'tvshows',
 ]
 
 MIDDLEWARE = [
@@ -123,7 +124,7 @@ MEDIA_URL = '/media/'
 MEDIA_ROOT = 'media/'
 
 STATICFILES_DIRS = [
-    BASE_DIR/ "static",
+    BASE_DIR / "static",
 ]
 
 

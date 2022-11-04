@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tv Show</title>
+</head>
+<body>
+<center>
+    <h1>Наши сериалы</h1>
+    {% for i in show %}
+        <h1>{{i.title}}</h1>
+        <p><i>{{i.genre}}</i></p>
+        <button><a href="/tvdetail/{{i.id}}">Подробнее</a></button>
+    {% endfor %}
+</center>
+
+</body>
+</html>
