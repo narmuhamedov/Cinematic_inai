@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/style.css'  %}">
+    <title>Firma</title>
+</head>
+<body>
+    
+    {% for i in firms%}
+    <div class="card">
+        <img src="{{i.image.url}}" alt="Avatar" style="width:30%">
+        <div class="container">
+          <h4><b>{{i.title}}</b></h4>
+          <p>{{i.total_cost}}</p>
+          <p>{{i.email}}</p>
+          <p>{{i.date_register}}</p>
+        </div>
+      </div>
+      {% endfor %}
+</body>
+</html>

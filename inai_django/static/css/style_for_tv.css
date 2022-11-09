@@ -1,4 +1,10 @@
+body{
+    background-color: blueviolet;
+}
 a{
     text-decoration: none;
     color: red;
+}
+.h1{
+    font-family: Arial;
 }

@@ -5,3 +5,4 @@ from . import models
 admin.site.register(models.Poster)
 admin.site.register(models.About_us)
 admin.site.register(models.Contacts)
+admin.site.register(models.Firma)

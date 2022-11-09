@@ -20,3 +20,8 @@ def about(request):
 def contacs(request):
     contact = models.Contacts.objects.all()
     return render(request, 'contacts.html', {'concatct': contact})
+
+#For Firma
+def firma(request):
+    firms = models.Firma.objects.all()
+    return render(request, 'firma.html', {'firms': firms})

@@ -11,8 +11,9 @@ class Poster(models.Model):
 
 
 class About_us(models.Model):
-    image = models.ImageField(upload_to='')
     description = models.TextField()
+    textssssssss = models.TextField(null=True)
+    text2 = models.TextField(null=True)
 
 
 class Contacts(models.Model):
@@ -23,3 +24,12 @@ class Contacts(models.Model):
     email = models.EmailField()
 
 
+class Firma(models.Model):
+    title = models.CharField(max_length=100)
+    total_cost = models.IntegerField()
+    image = models.ImageField(upload_to='')
+    email = models.EmailField()
+    date_register = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return self.title

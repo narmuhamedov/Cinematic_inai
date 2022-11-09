@@ -4,14 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <title>Post</title>
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style_post.css' %}">
 </head>
 <body>
 <center>
-    <a href="" class="gradient-button">Home</a>
-    <a href="/about_us/" class="gradient-button">About Us</a>
-    <a href="/contacts/" class="gradient-button">Contacts</a>
-    <a href="" class="gradient-button">Comment</a>
+    <button class="button_home"><a href="" class="gradient-button">Home</a></button>
+    <button><a href="/about_us/" class="gradient-button">About Us</a></button>
+    <button><a href="/contacts/" class="gradient-button">Contacts</a></button>
+    <button><a href="" class="gradient-button">Comment</a></button>
 
 <h1>Наши посты</h1>
 {% for i in post_object %}
