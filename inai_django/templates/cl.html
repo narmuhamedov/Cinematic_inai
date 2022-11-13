@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Clothing man</title>
+</head>
+<body bgcolor="#ffebcd">
+<center>
+  {% for i in cl %}
+    <h1>{{i.title}}</h1>
+  <p>{{i.description}}</p>
+  <img src="{{i.image.url}}" alt="">
+  <p>{{i.type_clothing}}</p>
+    <hr>
+  {% endfor %}
+    <button><a href="/add-cl/">Добавить новую вещь</a></button>
+
+</center>
+
+
+</body>
+</html>
