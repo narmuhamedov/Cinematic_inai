@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>FasFood</title>
+</head>
+<body>
+<center>
+  {% for i in order %}
+    <hr>
+  <h1>Заказ клиета: {{i.name}}</h1>
+  <p>Еда: {{i.choise_food}}</p>
+    <p>Колличество: {{i.quatity_food}}</p>
+    <p>Адресс : {{i.address}}</p>
+    <p>Номер клиента: {{i.number_phone}}</p>
+    <hr>
+  {% endfor %}
+</center>
+
+</body>
+</html>

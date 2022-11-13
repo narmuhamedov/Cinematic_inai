@@ -1,0 +1,22 @@
+body{
+    background-color: aqua;
+}
+
+/*кнопки меню*/
+a{
+    text-decoration: none;
+    font-family: Arial;
+    color:purple;
+}
+
+button{
+    width: 100px;
+    height: 50px;
+    background-color: darkkhaki;
+
+}
+
+/*Селектор класса*/
+.button_home{
+    background-color:chartreuse;
+}

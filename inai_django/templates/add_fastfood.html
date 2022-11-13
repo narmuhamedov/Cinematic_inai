@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add Fast Food</title>
+</head>
+<body>
+<center>
+<form action="/add_fast_food/" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{form.as_p}}
+    <input type="submit" value="Add Fast Food">
+</form>
+</center>
+</body>
+</html>
