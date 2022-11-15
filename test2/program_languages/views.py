@@ -1,10 +1,17 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 from . import models, forms
 from django.http import HttpResponse
 # Create your views here.
 def prog_lang_view(request):
     lang = models.ProgLang.objects.all()
     return render(request, 'index.html', {'lang_object': lang})
+
+
+#detail
+
+def prog_lang_detail_view(request, id):
+        lang = get_object_or_404(models.ProgLang, id=id)
+        return render(request, 'prog_detail.html', {'lang': lang})
 
 
 #create new post from html page
