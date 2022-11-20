@@ -1,0 +1,63 @@
+{% include 'header.html' %}
+<!-- Sliders -->
+{% for i in post %}
+<div class="container">
+    <div class="post">
+        <div class="post-header">
+            <h1>{{i.title}}</h1>
+            <div class="post-meta">
+                <time datetime="2019-04-01">{{i.month}}</time>
+                <span class="author">{{i.name}}</span>
+                <span class="category">{{i.education}}</span>
+            </div>
+        </div>
+        <div class="post-image">
+            <img src="{{i.image.url}}">
+        </div>
+        <div class="post-content">
+            <p>
+                {{i.description}}
+            </p>                
+        </div>
+    </div>
+</div>
+{% endfor %}
+<br><br>
+<center>
+	<h1>Популярный фильм за неделю</h1>
+	<br>
+    {% for j in film %}
+	<table border="4" class="tablebg">
+	<tr><td><iframe src="{{j.url_film}}" width="640" height="420">
+			</iframe></td></tr>
+
+	</table>
+    {% endfor %}
+</center>
+<br><br>
+<!-- Table-->
+<center>
+<table>
+  <caption>
+    Еда
+  </caption>
+  <tr>
+    <th>Наименование</th>
+    <th>Выход, гр.</th>
+    <th>Цена, руб.</th>
+  </tr>
+    {% for a in food %}
+  <tr>
+    <td>{{a.title_food}}</td><td>{{a.gram_food}}</td>
+    <td>{{a.cost_food}}</td>
+  </tr>
+    {% endfor %}
+
+<hr>
+
+
+</table>
+</center>
+<hr>
+<br><br>
+{% include 'footer.html' %}

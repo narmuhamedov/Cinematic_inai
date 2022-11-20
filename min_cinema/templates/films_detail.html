@@ -1,0 +1,35 @@
+{% include 'header.html' %}
+<!-- /**/ -->
+<div class="container">
+   <section class="toc-wrapper">
+      <div class="logo-wrapper">
+         <iframe src="{{film.trailer}}" width="450" height="300"></iframe>
+      </div>
+      <div class="content-wrapper">
+         <h1>Содержание</h1>
+         <ol class="toc">
+            <li>{{film.title}}</li>
+            <li>{{film.description}}</li>
+            <li>Дата выхода: {{film.date}}</li>
+            <li>Режиссер: {{film.producer}}</li>
+            <li>Сценарий: {{film.scenario}}</li>
+            <hr><hr><hr><hr>
+            <li>Комментарий: 
+              <hr>
+                {% for i in film.comment.all %}
+                <p>
+
+                    <i><b>
+                        {{i.text_comment}}
+                     </b></i>
+
+                </p>
+                {% endfor %}
+
+            </li>
+         </ol>
+      </div>
+   </section>
+</div>
+
+{% include 'footer.html' %}
