@@ -9,12 +9,14 @@
 <body>
 <center>
     <button><a href="/firma/">О фирме</a></button>
+    <button><a href="/add-shows/">Добавить новый фильм</a></button>
     <h1 class="h1">Наши фильмы</h1>
-    {% for i in show %}
+    {% for i in object_list %}
     <hr>
     <h2>{{i.title}}</h2>
     <p>{{i.genre}}</p>
     <a href="/tvshow_detail/{{i.id}}">Подробнее</a>
+
     {%endfor%}
 </center>
 
